@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+<div>
+  <ul>
+    {% for producto in productos %}
+    <p class="product-description">{{ producto.descripcion }}</p>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock %}

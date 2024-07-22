@@ -23,4 +23,9 @@ from page import views
 urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
+    path('producto/<str:categoria>/', views.producto, name='producto'),
+    path('producto/detalle/<int:producto_id>/', views.detalle_producto, name='detalle_producto'),
 ]
+
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings-MEDIA_ROOT)

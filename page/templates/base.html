@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="widht=device.widht, initial-scale=1.0"/>
+    <title>SouChoco</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}}" />
+  </head>
+  <body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="{% static 'images/logo.png' %}"/>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="{% url "index" %}">Nosotros</a>
+            </li>
+        <li>
+            <a href='#'>Productos</a>
+            <ul class="dropdown">
+                <li><a href="{% url 'producto' categoria='Alfajores' %}">Alfajores</a></li>
+                <li><a href="{% url 'producto' categoria='Budines' %}">Budines</a></li>
+                <li><a href="{% url 'producto' categoria='Alfacookies' %}">Alfacookies</a></li>
+                <li><a href="{% url 'producto' categoria='Galletas' %}">Galletas</a></li>
+                <li><a href="{% url 'producto' categoria='Chocotorta' %}">Chocotorta</a></li>
+                <li><a href="{% url 'producto' categoria='Brownies' %}">Brownies</a></li>
+                <li><a href="{% url 'producto' categoria='Galletas Personalizadas' %}">Galletas Personalizadas</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div class="container"> {% block content %}{% endblock  %}</div>
+
+
+
+
+
+</html>
+
