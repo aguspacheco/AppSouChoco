@@ -1,32 +1,28 @@
+/* General styles for the body */
 body {
-  background-image: ("/static/images/fondo.png");
+  background-image: url("/static/images/fondo.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   margin: 0;
+  padding: 0;
 }
 
+/* Styles for the navbar */
 .navbar {
-  background-image: ("/static/images/navbar.png");
+  background-image: url("/static/images/navbar.png");
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Distributes space evenly */
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0 20px; /* Adds padding on the sides */
 }
 
-.navbar a {
-  color: #fefae0;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
-  text-shadow: 2px 2px 0 #003554, -2px 2px 0 #023047, 2px -2px 0 #2b2d42, -2px -2px 0 #023047;
-}
-
-.navbar a:hover {
-  box-shadow: 0 0 10px 2px #caf0f8;
+.navbar-brand {
+  flex: 1; /* Takes up one part of the available space */
 }
 
 .navbar-brand img {
@@ -43,11 +39,27 @@ body {
 .nav-list {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-list li {
-  margin: 5px 5px;
+  margin: 0 10px;
   position: relative;
+}
+
+.navbar a {
+  color: #fefae0;
+  text-decoration: none;
+  margin: 0 5px;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-shadow: 2px 2px 0 #003554, -2px 2px 0 #023047, 2px -2px 0 #2b2d42, -2px -2px 0 #023047;
+}
+
+.navbar a:hover {
+  box-shadow: 0 0 10px 2px #caf0f8;
 }
 
 .nav-list .dropdown {
@@ -86,5 +98,15 @@ h1 {
 }
 
 p {
+  color: #faedcd;
+  font-size: 16px; /* Adjusted font size */
+  text-align: center;
+}
+
+.producto-description {
+  font-size: 16px;
+  font-style: italic;
   color: #f0e8e8;
+  text-align: center;
+  margin-top: 20px;
 }
