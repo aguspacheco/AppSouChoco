@@ -1,5 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <div>
     <p>{{ producto.descripcion }}</p>
+    <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" style="max-width: 100%; height: auto;">
 </div>
 {% endblock  %}

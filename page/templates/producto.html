@@ -1,10 +1,14 @@
-{% extends "base.html" %} {% block content %}
-<div>
-  <ul>
+{% extends 'base.html' %} {% block content %}
+<div class="product-container">
+  <ul class="product-list">
     {% for producto in productos %}
-    <p class="product-description">{{ producto.descripcion }}</p>
+    <li class="product-item">
+      <p class="product-description">{{ producto.descripcion }}</p>
+      {% if producto.imagen %}
+      <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" class="product-image" />
+      {% else %} {% endif %}
+    </li>
     {% endfor %}
   </ul>
 </div>
-
 {% endblock %}

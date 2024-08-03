@@ -16,5 +16,6 @@ def producto(request, categoria):
 
 def detalle_producto(request, producto_id):
     producto = get_object_or_404(Producto, id=producto_id)
+    context = {'producto': producto}
     return render(request, 'detalle_producto.html', {'producto': producto})
 

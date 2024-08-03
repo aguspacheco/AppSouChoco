@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from page import views
 from django.conf import settings
 from django.conf.urls.static import static
-from page import views
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -27,5 +27,5 @@ urlpatterns = [
     path('producto/detalle/<int:producto_id>/', views.detalle_producto, name='detalle_producto'),
 ]
 
-# if settings.DEBUG:
-#     urlpatterns += static(settings.MEDIA_URL, document_root=settings-MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

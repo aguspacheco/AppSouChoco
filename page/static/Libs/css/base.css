@@ -1,4 +1,3 @@
-/* General styles for the body */
 body {
   background-image: url("/static/images/fondo.png");
   background-size: cover;
@@ -8,21 +7,20 @@ body {
   padding: 0;
 }
 
-/* Styles for the navbar */
 .navbar {
   background-image: url("/static/images/navbar.png");
   width: 100%;
   display: flex;
-  justify-content: space-between; /* Distributes space evenly */
+  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 0 20px; /* Adds padding on the sides */
+  padding: 0 20px;
 }
 
 .navbar-brand {
-  flex: 1; /* Takes up one part of the available space */
+  flex: 1;
 }
 
 .navbar-brand img {
@@ -89,18 +87,20 @@ body {
   padding: 80px 20px 20px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #faedcd;
-  text-align: center;
-  text-shadow: 2px 2px 0 #003554, -2px 2px 0 #023047, 2px -2px 0 #2b2d42, -2px -2px 0 #023047;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.titulo {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+  width: 25%;
 }
 
 p {
-  color: #faedcd;
-  font-size: 16px; /* Adjusted font size */
+  color: #faedcd; /* Color del texto */
+  font-size: 16px; /* Tamaño de la fuente */
   text-align: center;
+  text-shadow: -0.5px -0.5px 0 #8de4ff, 0.5px -0.5px 0 #8de4ff, -0.5px 0.5px 0 #8de4ff,
+    0.5px 0.5px 0 #8de4ff; /* Contorno negro */
 }
 
 .producto-description {
