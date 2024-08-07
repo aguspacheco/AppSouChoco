@@ -96,11 +96,12 @@ body {
 }
 
 p {
-  color: #faedcd; /* Color del texto */
-  font-size: 16px; /* Tamaño de la fuente */
+  color: #e0e1dd;
+  font-size: 16px;
   text-align: center;
-  text-shadow: -0.5px -0.5px 0 #8de4ff, 0.5px -0.5px 0 #8de4ff, -0.5px 0.5px 0 #8de4ff,
-    0.5px 0.5px 0 #8de4ff; /* Contorno negro */
+  font-weight: bold;
+  transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-shadow: 2px 2px 0 #001219, -2px 2px 0 #001219, 2px -2px 0 #001219, -2px -2px 0 #023047;
 }
 
 .producto-description {
