@@ -63,7 +63,7 @@ body {
 .nav-list .dropdown {
   display: none;
   position: absolute;
-  background-image: url("/static/images/fondo.png");
+  background-image: url("/static/images/li.png");
   list-style: none;
   padding: 0;
 }

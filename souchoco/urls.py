@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('producto/<str:categoria>/', views.producto, name='producto'),
     path('producto/detalle/<int:producto_id>/', views.detalle_producto, name='detalle_producto'),
+    path('simulador/', views.simulador, name='simulador'),
 ]
 
 if settings.DEBUG:

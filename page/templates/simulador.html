@@ -1,0 +1,79 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static 'Libs/css/simulador.css' %}" />
+
+<section class="simulador">
+  <div class="calculos" id="calculosPedidos">
+    <fieldset id="contenedorSimulador" class="p-4 rounded border">
+      <form class="pedido row g-3" id="pedido-form">
+        <div class="col-12 elemento">
+          <label for="alfajores" class="form-label">Alfajores</label>
+          <input type="number" id="alfajores" class="form-control" min="0" />
+        </div>
+
+        <div class="col-12 elemento">
+          <label for="budines" class="form-label">Budines</label>
+          <input type="number" id="budines" class="form-control" min="0" />
+        </div>
+
+        <div class="col-12 elemento">
+          <label for="alfacookies" class="form-label">Alfacookies</label>
+          <input type="number" id="alfacookies" class="form-control" min="0" />
+        </div>
+
+        <div class="col-12 elemento">
+          <label for="galletas" class="form-label">Galletas</label>
+          <input type="number" id="galletas" class="form-control" min="0" />
+        </div>
+
+        <div class="col-12 elemento">
+          <label for="chocotorta" class="form-label">Chocotorta</label>
+          <input type="number" id="chocotorta" class="form-control" min="0" />
+        </div>
+
+        <div class="col-12 elemento">
+          <label for="brownies" class="form-label">Brownies</label>
+          <input type="number" id="brownies" class="form-control" min="0" />
+        </div>
+
+        <div class="col-12 elemento">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="envio" />
+            <label class="form-check-label" for="envio">Con envío</label>
+          </div>
+        </div>
+      </form>
+    </fieldset>
+
+    <div class="botones text-center mt-4">
+      <button class="btn btn-primary simular-btn" id="simular-btn" type="button">Simular</button>
+      <button class="btn btn-danger borrar-btn" id="borrar-btn" type="button">Borrar</button>
+    </div>
+  </div>
+
+  <div class="popUp d-none" id="popUpSimulador">
+    <div class="contenidoVentana">
+      <table id="tablaSimulador" class="table table-bordered">
+        <button class="cerrar btn btn-secondary" id="cerrar" type="button">Cerrar</button>
+        <caption class="text-center">
+          Tabla Pedido
+        </caption>
+        <thead>
+          <tr>
+            <th>Datos Ingresados</th>
+            <th>Cantidad</th>
+            <th>Tarifa</th>
+            <th>Monto</th>
+          </tr>
+        </thead>
+        <tbody class="resultados" id="resultadosPedido"></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Pago Total:</td>
+            <td id="abonarPedido"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+{% endblock %}
