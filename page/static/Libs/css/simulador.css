@@ -1,7 +1,6 @@
 .simulador {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 #contenedorSimulador {
@@ -15,13 +14,12 @@
 
 .elemento {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 5px;
 }
 
 .elemento label {
   flex: 3;
+  color: #fff;
 }
 
 .elemento input {
