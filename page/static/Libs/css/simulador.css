@@ -4,7 +4,7 @@
 }
 
 #contenedorSimulador {
-  max-width: 300px;
+  max-width: 250px;
   background-image: url("/static/images/li.png");
 }
 
@@ -27,21 +27,11 @@
   padding: 1px;
 }
 
-.botones button {
-  margin: 1px;
-  width: 80px;
+input[type="checkbox"] {
+  transform: scale(1);
 }
-
-.popUp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #00000080;
+.contenidoVentana {
+  display: none;
 }
 
 .contenidoVentana {

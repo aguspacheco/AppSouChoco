@@ -25,13 +25,25 @@ body {
 
 .navbar-brand img {
   height: 50px;
-  margin-right: 10px;
   border-radius: 50%;
+  animation: blueGlow 5s infinite; /* Animación con duración de 5 segundos y repetición infinita */
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .navbar-brand img:hover {
   box-shadow: 0 0 20px 5px #3a86ff;
+}
+
+@keyframes blueGlow {
+  0% {
+    box-shadow: 0 0 0 0 #1a3b7080;
+  }
+  50% {
+    box-shadow: 0 0 20px 10px #0062ff;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #4785eb80;
+  }
 }
 
 .nav-list {
