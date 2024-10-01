@@ -6,6 +6,7 @@ class Producto(models.Model):
     descripcion = models.CharField(null=False, max_length=200)
     categoria = models.CharField(null=False, max_length=200)
     imagen = models.ImageField(upload_to='productos/', blank=True, null=True)
-
+    precio = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0.00)
+    
     def __str__(self):
         return self.nombre

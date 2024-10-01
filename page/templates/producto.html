@@ -4,6 +4,7 @@
     {% for producto in productos %}
     <li class="product-item">
       <p class="product-description">{{ producto.descripcion }}</p>
+      <p>{{ producto.precio }}$</p>
       {% if producto.imagen %}
       <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" class="product-image" />
       {% else %} {% endif %}
