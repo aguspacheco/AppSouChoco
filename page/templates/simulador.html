@@ -39,10 +39,8 @@
   </div>
 
   <div class="contenidoVentana" id="contenidoVentana">
+    <h2 class="text-center">Tabla Pedido</h2>
     <table id="tablaSimulador" class="table table-bordered">
-      <caption class="text-center">
-        Tabla Pedido
-      </caption>
       <thead>
         <tr>
           <th>Datos Ingresados</th>
@@ -57,9 +55,11 @@
           <td colspan="3">Pago Total:</td>
           <td id="monto"></td>
         </tr>
-        <button class="btn btn-warning" id="volverBtn" type="button">Volver</button>
       </tfoot>
     </table>
+    <div class="text-center">
+      <button class="btn btn-warning" id="volverBtn" type="button">Volver</button>
+    </div>
   </div>
   <script src="{% static 'Libs/js/buttons/simular.js' %}" type="module"></script>
   <script src="{% static 'Libs/js/buttons/borrar.js' %}" type="module"></script>
