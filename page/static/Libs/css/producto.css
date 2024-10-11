@@ -1,10 +1,10 @@
 /* Estilo para la descripción del producto */
 .product-description {
-  font-size: 16px; /* Tamaño de fuente más pequeño */
+  font-size: 16px;
   font-style: italic;
   color: #fed9b7;
-  text-align: center;
-  margin-top: 20px; /* Márgen superior */
+  text-align: left;
+  margin-left: 20px;
 }
 
 /* Estilo para la imagen del producto */
@@ -12,7 +12,7 @@
   width: 200px;
   height: auto;
   display: block;
-  margin: 20px auto; /* Márgen superior */
+  margin: 0;
   border: 1px solid #e0e6ec;
   border-radius: 5px;
   box-shadow: 10px 0 50px #8de4ff;
@@ -21,9 +21,15 @@
 /* Contenedor para el producto, centrando verticalmente la descripción */
 .product-item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   margin-bottom: 20px; /* Márgen inferior entre productos */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #0000001a;
+  max-width: 800px;
+  margin: 0 auto 20px;
 }

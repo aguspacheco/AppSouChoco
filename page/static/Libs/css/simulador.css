@@ -39,9 +39,54 @@ input[type="checkbox"] {
   padding: 20px;
   border-radius: 8px;
   max-width: 600px;
-  width: 100%;
 }
 
 h2 {
   font-size: 20px;
+}
+
+/* Estilos para móviles */
+@media only screen and (max-width: 200px) {
+  /* Hacer que la tabla se pueda desplazar horizontalmente */
+  .simulador {
+    overflow-x: auto; /* Habilitar el scroll horizontal */
+  }
+
+  table {
+    width: 100%;
+    display: block; /* Hacer que la tabla sea un bloque para mayor control en móviles */
+    overflow-x: auto;
+    white-space: nowrap; /* Evitar que las celdas se rompan en varias líneas */
+  }
+
+  /* Ajustar el tamaño del texto en la tabla */
+  table th,
+  table td {
+    font-size: 12px; /* Reducir el tamaño del texto para móviles */
+    padding: 5px; /* Reducir el padding en móviles */
+  }
+
+  /* Si la tabla tiene muchas columnas, hacer que sea más flexible */
+  .simulador table td:before {
+    content: attr(data-label); /* Mostrar etiquetas de datos como encabezados en cada celda */
+    float: left;
+    font-weight: bold;
+  }
+
+  .simulador table td {
+    display: block;
+    text-align: right; /* Alinear a la derecha los datos */
+    position: relative;
+    padding-left: 50%; /* Espacio para las etiquetas de datos */
+    white-space: normal;
+    border: none; /* Evitar que las celdas se vean desordenadas */
+  }
+
+  .simulador table td:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 10px;
+    color: #fff;
+  }
 }

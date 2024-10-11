@@ -1,15 +1,14 @@
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   text-align: center;
-  padding: 10px;
   background-image: url("/static/images/navbar.png");
 }
 
 .logo {
-  width: 30px;
+  width: 20px;
   height: 30px;
   margin: 0 10px;
 }

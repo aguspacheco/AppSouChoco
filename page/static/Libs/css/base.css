@@ -26,7 +26,7 @@ body {
 .navbar-brand img {
   height: 50px;
   border-radius: 50%;
-  animation: blueGlow 5s infinite; /* Animación con duración de 5 segundos y repetición infinita */
+  animation: blueGlow 5s infinite;
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -122,4 +122,46 @@ p {
   color: #f0e8e8;
   text-align: center;
   margin-top: 20px;
+}
+
+/* Estilos para pantallas pequeñas (smartphones) */
+@media only screen and (max-width: 600px) {
+  /* Ajustar tamaño del logo en la navbar */
+  .navbar-brand img {
+    height: 40px; /* Reducir el tamaño en dispositivos pequeños */
+  }
+
+  /* Ajustar el tamaño del contenedor */
+  .container {
+    padding: 60px 10px 10px; /* Reducir el padding */
+  }
+
+  /* Ajustar el ancho del título */
+  .titulo {
+    width: 80%; /* El título ocupará más espacio en móviles */
+  }
+
+  /* Ajustar el tamaño del texto */
+  p,
+  .producto-description {
+    font-size: 14px; /* Reducir el tamaño del texto */
+  }
+
+  /* Hacer que la barra de navegación sea más compacta */
+  .navbar {
+    padding: 0 10px; /* Reducir el padding de la navbar */
+  }
+
+  /* Asegurar que la lista de navegación no se desborde */
+  .nav-list {
+    align-items: center;
+  }
+
+  .nav-list li {
+    margin: 5px 0; /* Añadir margen entre los elementos */
+  }
+
+  .nav-list .dropdown a {
+    padding: 10px; /* Hacer los enlaces más fáciles de tocar */
+  }
 }
