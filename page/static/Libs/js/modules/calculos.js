@@ -29,11 +29,14 @@ export function formato(monto) {
  * @returns {Object} - Objeto con las cantidades de productos.
  */
 export function obtenerValores() {
-  const productos = ["alfajores", "budin limon", "budin naranja", "alfacookies", "galletas"];
+  const productos = ["alfajores", "budinLimon", "budinNaranja", "alfacookies", "galletas"];
   const valores = {};
+
   productos.forEach((producto) => {
-    valores[producto] = parseInt(document.getElementById(producto).value) || 0;
+    const elemento = document.getElementById(producto);
+    valores[producto] = elemento ? parseInt(elemento.value) || 0 : 0;
   });
+
   return valores;
 }
 

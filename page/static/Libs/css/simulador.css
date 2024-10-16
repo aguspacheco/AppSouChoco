@@ -90,3 +90,39 @@ h2 {
     color: #fff;
   }
 }
+
+/* Estilo del cartel emergente */
+#cartelEnvio {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #ffc107; /* Color de advertencia */
+  color: #000;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Asegurarnos de que esté siempre visible sobre otros elementos */
+  display: none; /* Oculto inicialmente */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Animación para aparecer y desaparecer */
+#cartelEnvio.mostrar {
+  display: block; /* Mostrar el cartel */
+  animation: desvanecer 10s forwards; /* Mostrar por 10 segundos y luego desaparecer */
+}
+
+/* Keyframes para el desvanecimiento del cartel */
+@keyframes desvanecer {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  } /* Mantener visible la mayor parte del tiempo */
+  100% {
+    opacity: 0;
+    display: none;
+  } /* Al final de la animación, se oculta */
+}

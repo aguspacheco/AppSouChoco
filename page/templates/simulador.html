@@ -4,6 +4,7 @@
 <section class="simulador">
   <div class="calculos" id="calculosPedidos">
     <fieldset id="contenedorSimulador" class="p-4 rounded border">
+      <div id="cartelEnvio">El envío se cobra según la zona</div>
       <form class="pedido row g-3" id="pedido-form">
         <div class="col-12 elemento">
           <label for="alfajores" class="form-label">Alfajores</label>
@@ -66,6 +67,5 @@
   <script src="{% static 'Libs/js/buttons/volver.js' %}" type="module"></script>
   <script src="{% static 'Libs/js/modules/calculos.js' %}" type="module"></script>
   <script src="{% static 'Libs/js/modules/constantes.js' %}" type="module"></script>
-  <script src="{% static 'Libs/js/modules/main.js' %}" type="module"></script>
 </section>
 {% endblock %}
