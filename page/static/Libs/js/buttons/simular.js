@@ -10,18 +10,11 @@ function simular(mostrarContenido) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Función para mostrar el cartel de envío
   function mostrarCartelEnvio() {
     const cartel = document.getElementById("cartelEnvio");
-    cartel.classList.add("mostrar"); // Añadir la clase para mostrar el cartel
-
-    // Después de 10 segundos, se quitará la clase que lo muestra
-    setTimeout(() => {
-      cartel.classList.remove("mostrar");
-    }, 10000); // 10,000 milisegundos = 10 segundos
+    cartel.classList.add("mostrar");
   }
 
-  // Llama a la función para mostrar el cartel
   mostrarCartelEnvio();
 });
 

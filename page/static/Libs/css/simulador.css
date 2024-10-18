@@ -45,41 +45,37 @@ h2 {
   font-size: 20px;
 }
 
-/* Estilos para móviles */
 @media only screen and (max-width: 200px) {
-  /* Hacer que la tabla se pueda desplazar horizontalmente */
   .simulador {
-    overflow-x: auto; /* Habilitar el scroll horizontal */
+    overflow-x: auto;
   }
 
   table {
     width: 100%;
-    display: block; /* Hacer que la tabla sea un bloque para mayor control en móviles */
+    display: block;
     overflow-x: auto;
-    white-space: nowrap; /* Evitar que las celdas se rompan en varias líneas */
+    white-space: nowrap;
   }
 
-  /* Ajustar el tamaño del texto en la tabla */
   table th,
   table td {
-    font-size: 12px; /* Reducir el tamaño del texto para móviles */
-    padding: 5px; /* Reducir el padding en móviles */
+    font-size: 12px;
+    padding: 5px;
   }
 
-  /* Si la tabla tiene muchas columnas, hacer que sea más flexible */
   .simulador table td:before {
-    content: attr(data-label); /* Mostrar etiquetas de datos como encabezados en cada celda */
+    content: attr(data-label);
     float: left;
     font-weight: bold;
   }
 
   .simulador table td {
     display: block;
-    text-align: right; /* Alinear a la derecha los datos */
+    text-align: right;
     position: relative;
-    padding-left: 50%; /* Espacio para las etiquetas de datos */
+    padding-left: 50%;
     white-space: normal;
-    border: none; /* Evitar que las celdas se vean desordenadas */
+    border: none;
   }
 
   .simulador table td:before {
@@ -91,38 +87,34 @@ h2 {
   }
 }
 
-/* Estilo del cartel emergente */
+#cartelEnvio.mostrar {
+  animation: desvanecer 10s forwards;
+}
+
 #cartelEnvio {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: #ffc107; /* Color de advertencia */
-  color: #000;
+  top: 5px;
+  left: 550px;
+  background-color: #ffc107;
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Asegurarnos de que esté siempre visible sobre otros elementos */
-  display: none; /* Oculto inicialmente */
-  font-size: 16px;
+  box-shadow: 0px 4px 10px #0000001a;
   font-weight: bold;
 }
 
-/* Animación para aparecer y desaparecer */
 #cartelEnvio.mostrar {
-  display: block; /* Mostrar el cartel */
-  animation: desvanecer 10s forwards; /* Mostrar por 10 segundos y luego desaparecer */
+  display: block;
 }
 
-/* Keyframes para el desvanecimiento del cartel */
 @keyframes desvanecer {
   0% {
     opacity: 1;
   }
   90% {
     opacity: 1;
-  } /* Mantener visible la mayor parte del tiempo */
+  }
   100% {
     opacity: 0;
     display: none;
-  } /* Al final de la animación, se oculta */
+  }
 }
