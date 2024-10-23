@@ -96,7 +96,7 @@ body {
 }
 
 .container {
-  padding: 80px 20px 20px;
+  padding: 80px 20px;
 }
 
 .titulo {
@@ -109,6 +109,7 @@ body {
 
 p {
   color: #e0e1dd;
+  text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 0 #001219, -2px 2px 0 #001219, 2px -2px 0 #001219, -2px -2px 0 #023047;
 }

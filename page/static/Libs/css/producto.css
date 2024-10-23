@@ -3,14 +3,13 @@
   font-size: 16px;
   font-style: italic;
   color: #fed9b7;
-  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
   margin-left: 20px; /* Espacio entre la descripción y la imagen */
   flex: 1; /* Ocupa el espacio restante en el contenedor de flexbox */
 }
 
 /* Estilo para la imagen del producto */
 .product-image {
-  width: 200px;
+  width: 150px;
   height: auto;
   display: block;
   margin: 0;
@@ -22,9 +21,49 @@
 /* Contenedor para el producto, centrando verticalmente la descripción */
 .product-item {
   display: flex;
-  box-shadow: 0 4px 8px #0000001a;
   max-width: 800px;
   margin: 0 auto 20px;
   flex-direction: row-reverse;
   align-items: center;
+}
+
+/* Estilos para smartphones */
+@media only screen and (max-width: 600px) {
+  /* Ajustes para los productos en móviles */
+  .product-item {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen encima de la descripción en móviles */
+    align-items: center; /* Centra los elementos en la columna */
+    margin-bottom: 20px;
+  }
+
+  /* Estilo para la imagen del producto */
+  .product-image {
+    width: 50%; /* La imagen ocupa todo el ancho disponible */
+    max-width: 100px; /* Limitar el tamaño máximo de la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    margin-bottom: 100px; /* Añadir espacio debajo de la imagen */
+  }
+
+  /* Ajuste para la descripción del producto */
+  .product-description {
+    font-size: 14px; /* Reducir un poco el tamaño del texto */
+    margin-left: 0; /* Elimina el margen izquierdo */
+    text-align: center; /* Centra el texto en móviles */
+    width: 100%; /* Asegura que la descripción ocupe todo el ancho */
+  }
+
+  /* Footer optimizado para móviles */
+  .footer {
+    text-align: center;
+    padding: 10px 0;
+    background-image: url("/static/images/navbar.png");
+    width: 100%;
+  }
+
+  .footer .logo {
+    width: 30px; /* Ajustar tamaño del logo */
+    height: 30px;
+    margin: 0 5px;
+  }
 }
