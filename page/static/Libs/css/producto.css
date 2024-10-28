@@ -40,7 +40,6 @@
   /* Estilo para la imagen del producto */
   .product-image {
     width: 50%; /* La imagen ocupa todo el ancho disponible */
-    max-width: 100px; /* Limitar el tamaño máximo de la imagen */
     height: auto; /* Mantener la proporción de la imagen */
     margin-bottom: 100px; /* Añadir espacio debajo de la imagen */
   }

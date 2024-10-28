@@ -1,6 +1,8 @@
+/* Estilos generales */
 .simulador {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 #contenedorSimulador {
@@ -30,6 +32,7 @@
 input[type="checkbox"] {
   transform: scale(1);
 }
+
 .contenidoVentana {
   display: none;
 }
@@ -45,11 +48,51 @@ h2 {
   font-size: 20px;
 }
 
-@media only screen and (max-width: 200px) {
+/* Estilos cartel de advertencia */
+#cartelEnvio {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffc107;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px #0000001a;
+  font-size: 14px;
+  width: auto;
+  max-width: 300px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#cartelEnvio.mostrar {
+  display: block;
+  animation: desvanecer 10s forwards;
+  margin-top: 60px;
+}
+
+/* Animación para ocultar el cartel de envío */
+@keyframes desvanecer {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* Estilos específicos para smartphones */
+@media only screen and (max-width: 600px) {
+  /* Ajustes para el simulador en smartphones */
   .simulador {
     overflow-x: auto;
   }
 
+  /* Ajustes para el contenedor de la tabla */
   table {
     width: 100%;
     display: block;
@@ -85,36 +128,10 @@ h2 {
     padding-left: 10px;
     color: #fff;
   }
-}
 
-#cartelEnvio.mostrar {
-  animation: desvanecer 10s forwards;
-}
-
-#cartelEnvio {
-  position: fixed;
-  top: 5px;
-  left: 550px;
-  background-color: #ffc107;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px #0000001a;
-  font-weight: bold;
-}
-
-#cartelEnvio.mostrar {
-  display: block;
-}
-
-@keyframes desvanecer {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    display: none;
+  /* Ajustes específicos para el cartel de envío en smartphones */
+  #cartelEnvio {
+    width: 90%; /* Ancho del 90% en smartphones */
+    margin-top: 50px;
   }
 }
