@@ -35,13 +35,29 @@ input[type="checkbox"] {
 
 .contenidoVentana {
   display: none;
-}
-
-.contenidoVentana {
   background: #fff;
   padding: 20px;
   border-radius: 8px;
   max-width: 600px;
+}
+
+#tablaSimulador {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#tablaSimulador th {
+  background-color: #5b6eda65;
+  font-weight: bold;
+  color: #333;
+}
+
+#tablaSimulador th,
+#tablaSimulador td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 16px;
 }
 
 h2 {
@@ -67,7 +83,7 @@ h2 {
 
 #cartelEnvio.mostrar {
   display: block;
-  animation: desvanecer 10s forwards;
+  animation: desvanecer 5s forwards;
   margin-top: 60px;
 }
 
@@ -87,7 +103,6 @@ h2 {
 
 /* Estilos específicos para smartphones */
 @media only screen and (max-width: 600px) {
-  /* Ajustes para el simulador en smartphones */
   .simulador {
     overflow-x: auto;
   }

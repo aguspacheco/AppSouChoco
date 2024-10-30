@@ -6,9 +6,11 @@ import { precios } from "./constantes.js";
  * @returns {number} - Total calculado de los productos.
  */
 export function calcularTotal(valores) {
-  return Object.keys(valores).reduce((total, producto) => {
+  const totalProductos = Object.keys(valores).reduce((total, producto) => {
     return total + (precios[producto] ? valores[producto] * precios[producto] : 0);
   }, 0);
+
+  return totalProductos + precios.packaging;
 }
 
 /**
@@ -49,12 +51,13 @@ export function obtenerValores() {
  */
 export function agregarFila(nombreProducto, cantidad, valorUnitario, tabla) {
   if (cantidad <= 0 || valorUnitario <= 0) return;
+
   const fila = `
     <tr>
       <td>${nombreProducto}</td>
       <td>${cantidad}</td>
       <td>${formato(valorUnitario)}</td>
-      <td>${formato(cantidad * valorUnitario)}</td>
+      <td>${formato(precios.packaging)}</td>
     </tr>
   `;
   tabla.insertAdjacentHTML("beforeend", fila);

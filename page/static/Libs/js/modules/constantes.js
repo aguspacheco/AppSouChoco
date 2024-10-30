@@ -4,4 +4,5 @@ export const precios = {
   budinNaranja: 3800,
   alfacookies: 360,
   galletas: 620,
+  packaging: 500,
 };
