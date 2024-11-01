@@ -107,41 +107,30 @@ h2 {
     overflow-x: auto;
   }
 
-  /* Ajustes para el contenedor de la tabla */
-  table {
+  /* Ajustes para la tabla en pantallas pequeñas */
+  #tablaSimulador {
     width: 100%;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  table th,
-  table td {
+    display: table; /* Mantener estructura de tabla */
+    border-collapse: collapse;
     font-size: 12px;
-    padding: 5px;
   }
 
-  .simulador table td:before {
-    content: attr(data-label);
-    float: left;
+  #tablaSimulador th,
+  #tablaSimulador td {
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  #tablaSimulador th {
+    background-color: #f2f2f2;
     font-weight: bold;
+    color: #333;
   }
 
-  .simulador table td {
-    display: block;
-    text-align: right;
-    position: relative;
-    padding-left: 50%;
-    white-space: normal;
-    border: none;
-  }
-
-  .simulador table td:before {
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding-left: 10px;
-    color: #fff;
+  /* Elimina las propiedades que apilan celdas en bloques */
+  #tablaSimulador td {
+    display: table-cell; /* Cada celda mantiene su posición en la columna */
+    text-align: center; /* Centrar contenido en móviles */
   }
 
   /* Ajustes específicos para el cartel de envío en smartphones */
