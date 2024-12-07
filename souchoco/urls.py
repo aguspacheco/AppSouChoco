@@ -21,11 +21,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.index, name='index'),
+   path('', views.index, name='index'),
     path('admin/', admin.site.urls),
-    path('producto/<str:categoria>/', views.producto, name='producto'),
+    path('producto/', views.listar_productos, name='productos'),  
+    path('producto/<str:categoria>/', views.producto, name='producto'),  
     path('producto/detalle/<int:producto_id>/', views.detalle_producto, name='detalle_producto'),
-    path('simulador/', views.simulador, name='simulador'),
 ]
 
 if settings.DEBUG:

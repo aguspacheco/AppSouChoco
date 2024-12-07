@@ -19,6 +19,8 @@ def detalle_producto(request, producto_id):
     context = {'producto': producto}
     return render(request, 'detalle_producto.html', {'producto': producto})
 
-def simulador(request):
-    return render(request,"simulador.html")
+def listar_productos(request):
+    productos = Producto.objects.all()
+    context = {'productos': productos}
+    return render(request, 'producto.html', context)
 
