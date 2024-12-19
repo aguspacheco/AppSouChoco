@@ -1,5 +1,7 @@
 body {
-  background: linear-gradient(to left, #60a5fa, #2563eb);
+  background: #1488cc, #2b32b2;
+  background: -webkit-linear-gradient(90deg, #1488cc, #2b32b2);
+  background: linear-gradient(90deg, #1488cc, #2b32b2);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -82,27 +84,40 @@ body {
   box-shadow: 0 0 10px 2px #caf0f8;
 }
 
-.nav-list .dropdown {
+.dropdown,
+.sub-dropdown {
   display: none;
   position: absolute;
-  background-image: url("/static/images/li.png");
+  background-image: rgba(0, 0, 0.8);
   list-style: none;
-  padding: 0;
+  margin: 0;
+  padding: 10px 0;
+  border-radius: 5px;
+  z-index: 10;
 }
 
-.nav-list .dropdown a {
-  display: block;
-  padding: 5px;
-  color: #f0e8e8;
+.dropdown a,
+.sub-dropdown a {
+  color: #fff;
+  padding: 5px 15px;
   text-decoration: none;
-}
-
-.nav-list .dropdown a:hover {
-  background-image: url("/static/images/navbar.png");
-}
-
-.nav-list li:hover .dropdown {
   display: block;
+  transition: background 0.3s ease-in-out;
+}
+
+.dropdown a:hover,
+.sub-dropdown a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-list li:hover > .dropdown {
+  display: block;
+}
+
+.dropdown li:hover > .sub-dropdown {
+  display: block;
+  top: 0;
+  left: 100%;
 }
 
 .container {
@@ -159,7 +174,7 @@ p {
 }
 
 .faq-question {
-  align-items: center;
+  text-align: center;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -169,10 +184,6 @@ p {
 .faq-question .icon {
   font-size: 1.2em;
   transition: transform 0.3s ease;
-}
-
-.faq-question.active .icon {
-  transform: rotate(45deg);
 }
 
 .faq-item {
