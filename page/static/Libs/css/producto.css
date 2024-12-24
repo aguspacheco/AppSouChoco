@@ -27,6 +27,26 @@
   align-items: center;
 }
 
+.sub-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.sub-dropdown.show {
+  max-height: 500px;
+}
+
+.indicador {
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.sub-dropdown.show + .indicador {
+  transform: rotate(45deg);
+}
+
 /* Estilos para smartphones */
 @media only screen and (max-width: 600px) {
   /* Ajustes para los productos en móviles */

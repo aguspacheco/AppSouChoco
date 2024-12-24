@@ -1,0 +1,16 @@
+#descripcion-nosotros {
+  font-size: 16px;
+  font-style: italic;
+  color: #fed9b7;
+  margin-left: 20px;
+  margin-top: 100px;
+  flex: 1;
+}
+
+.container {
+  margin-bottom: 60px; /* Altura del footer */
+}
+
+.footer img {
+  margin: 0 5px; /* Espaciado entre los iconos */
+}

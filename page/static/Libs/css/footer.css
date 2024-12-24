@@ -1,13 +1,16 @@
 .footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   text-align: center;
+  padding: 20px; /* Añade más espacio dentro del footer */
+  color: #fff; /* Texto opcional */
 }
 
-.logo {
-  width: 20px;
-  height: 30px;
-  margin: 0 10px;
+.container {
+  margin-bottom: 80px; /* Incrementa el espacio para separar el contenido del footer */
+}
+
+.footer img {
+  margin: 0 5px; /* Espaciado entre los iconos */
 }
