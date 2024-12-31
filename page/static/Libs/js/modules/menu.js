@@ -1,25 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggles = document.querySelectorAll(".toggle-submenu");
+document.querySelectorAll(".toggle-submenu").forEach((toggle) => {
+  toggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    const submenu = toggle.nextElementSibling;
 
-  toggles.forEach((toggle) => {
-    toggle.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      const submenu = toggle.nextElementSibling;
-      const indicador = toggle.querySelector(".indicador");
-
-      if (submenu && submenu.classList.contains("sub-dropdown")) {
-        if (submenu.classList.contains("show")) {
-          submenu.computedStyleMap.maxHeight = null;
-        } else {
-          submenu.computedStyleMap.maxHeight = submenu.scrollHeight + "px";
-        }
-        submenu.classList.toggle("show");
-
-        if (indicador) {
-          indicador.textContent = submenu.classList.contains("show") ? "-" : "+";
-        }
-      }
-    });
+    if (submenu.style.display === "block") {
+      submenu.style.display = "none";
+      toggle.querySelector(".indicador").textContent = "+";
+    } else {
+      submenu.style.display = "block";
+      toggle.querySelector(".indicador").textContent = "-";
+    }
   });
+});
+
+// Ocultar submenús al hacer clic fuera
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".dropdown-container")) {
+    document.querySelectorAll(".sub-dropdown").forEach((submenu) => {
+      submenu.style.display = "none";
+    });
+    document.querySelectorAll(".indicador").forEach((indicador) => {
+      indicador.textContent = "+";
+    });
+  }
 });
