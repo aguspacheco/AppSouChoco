@@ -23,9 +23,6 @@
             <li>
                 <a href="{% url "index" %}">Nosotros</a>
             </li>
-            <li>
-                <a href="{% url "preguntas" %}">Preguntas frecuentes</a>
-            </li>
             <li class="dropdown-container">
                 <a href='#'>Productos</a>
                 <ul class="dropdown">
@@ -62,6 +59,9 @@
                         <a href="{% url 'producto' categoria='Brownies' %}">Brownies</a>
                     </li>
                 </ul>
+            </li>
+            <li>
+                <a href="{% url "preguntas" %}">Preguntas frecuentes</a>
             </li>
         </ul>
     </nav>

@@ -32,7 +32,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.1);
 }
 
 .nav-list {
@@ -49,13 +48,8 @@
 
 .nav-list a {
   text-decoration: none;
-  color: #333;
   padding: 10px 15px;
   transition: color 0.3s ease;
-}
-
-.nav-list a:hover {
-  color: #007bff;
 }
 
 .dropdown {
@@ -63,9 +57,6 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   list-style: none;
   padding: 10px 0;
   z-index: 10;
@@ -78,16 +69,6 @@
 .dropdown a {
   display: block;
   padding: 10px 15px;
-  color: #333;
-}
-
-.dropdown a:hover {
-  background-color: #f8f9fa;
-}
-
-/* Mostrar dropdowns al pasar el mouse */
-.dropdown-container:hover > .dropdown {
-  display: block;
 }
 
 /* Sub-dropdowns */
@@ -100,8 +81,9 @@
   white-space: nowrap;
 }
 
-.dropdown-container:hover > .sub-dropdown {
-  display: block;
+.toggle-submenu {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Indicadores */
