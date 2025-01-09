@@ -27,7 +27,7 @@ urlpatterns = [
     path('producto/', views.listar_productos, name='productos'),  
     path('producto/<str:categoria>/', views.producto, name='producto'),  
     path('producto/detalle/<int:producto_id>/', views.detalle_producto, name='detalle_producto'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

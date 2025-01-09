@@ -18,6 +18,12 @@
   box-shadow: 10px 0 50px #8de4ff;
 }
 
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
 /* Contenedor para el producto, centrando verticalmente la descripción */
 .product-item {
   display: flex;
