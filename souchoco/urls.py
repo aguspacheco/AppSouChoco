@@ -24,9 +24,9 @@ urlpatterns = [
    path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     path('pregunta', views.preguntas, name='preguntas'),
-    path('producto/', views.listar_productos, name='productos'),  
+    path('producto/', views.listar_productos, name='productos'), 
+    path('producto/<int:producto_id>/', views.detalle_producto, name='detalle_producto'),
     path('producto/<str:categoria>/', views.producto, name='producto'),  
-    path('producto/detalle/<int:producto_id>/', views.detalle_producto, name='detalle_producto'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
