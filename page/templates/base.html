@@ -49,8 +49,12 @@
                         <a href="{% url 'producto' categoria='Alfacookies' %}">Alfacookies</a>
                     </li>
                     <li>
-                        <a href="{% url 'producto' categoria='Brownies' %}">Brownies</a>
-                    </li>
+                        <a href="#" class="toggle-submenu">Brownies <span class="indicador">+</span></a>
+                        <ul class="dropdown sub-dropdown">
+                            <li> <a href="{% url 'producto' categoria='Entero' %}">Entero</a></li>
+                            <li><a href="{% url 'producto' categoria='Porciones' %}">En porciones</a></li>
+                        </ul>
+                    <li>
                 </ul>
             </li>
             <li>
