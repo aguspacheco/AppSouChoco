@@ -98,42 +98,40 @@
   margin-left: 5px;
 }
 
-/* Estilos para smartphones */
-@media only screen and (max-width: 600px) {
-  /* Ajustes para los productos en móviles */
-  .product-item {
-    display: flex;
-    flex-direction: column; /* Coloca la imagen encima de la descripción en móviles */
-    align-items: center; /* Centra los elementos en la columna */
-    margin-bottom: 20px;
+/* Media query para pantallas de smartphones (por ejemplo, menos de 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Mantener la disposición horizontal */
+    padding: 1px;
+    overflow-x: auto; /* Permitir desplazamiento horizontal si el contenido no cabe */
+    white-space: nowrap; /* Evitar que los elementos se envuelvan a la siguiente línea */
   }
 
-  /* Estilo para la imagen del producto */
-  .product-image {
-    width: 50%; /* La imagen ocupa todo el ancho disponible */
-    height: auto; /* Mantener la proporción de la imagen */
-    margin-bottom: 100px; /* Añadir espacio debajo de la imagen */
+  .nav-list {
+    flex-direction: row; /* Mantener la disposición horizontal */
+    align-items: center; /* Centrar verticalmente los elementos */
+    gap: 10px; /* Espacio entre elementos */
   }
 
-  /* Ajuste para la descripción del producto */
-  .product-description {
-    font-size: 14px; /* Reducir un poco el tamaño del texto */
-    margin-left: 0; /* Elimina el margen izquierdo */
-    text-align: center; /* Centra el texto en móviles */
-    width: 100%; /* Asegura que la descripción ocupe todo el ancho */
+  .nav-list li {
+    margin-right: 10px; /* Espacio entre elementos */
+    margin-bottom: 0; /* Eliminar margen inferior */
   }
 
-  /* Footer optimizado para móviles */
-  .footer {
-    text-align: center;
-    padding: 10px 0;
-    background-image: url("/static/images/navbar.png");
-    width: 100%;
+  .dropdown {
+    position: absolute; /* Restaurar posición absoluta para dropdowns */
+    top: 100%;
+    left: 0;
   }
 
-  .footer .logo {
-    width: 30px; /* Ajustar tamaño del logo */
-    height: 30px;
-    margin: 0 5px;
+  .sub-dropdown {
+    position: absolute; /* Restaurar posición absoluta para sub-dropdowns */
+    top: 0;
+    left: 100%;
+  }
+
+  /* Ajustes adicionales para mejorar la experiencia en móviles */
+  .nav-list a {
+    font-size: 12px; /* Reducir el tamaño de la fuente */
   }
 }
