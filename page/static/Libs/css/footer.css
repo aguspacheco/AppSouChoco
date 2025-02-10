@@ -3,14 +3,31 @@
   left: 0;
   right: 0;
   text-align: center;
-  padding: 20px; /* Añade más espacio dentro del footer */
-  color: #fff; /* Texto opcional */
+  padding: 20px;
+  color: #fff;
 }
 
 .container {
-  margin-bottom: 80px; /* Incrementa el espacio para separar el contenido del footer */
+  margin-bottom: 80px;
 }
 
 .footer img {
-  margin: 0 5px; /* Espaciado entre los iconos */
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .container {
+    margin-bottom: 50px;
+  }
+
+  .footer img {
+    margin: 0 3px;
+    width: 24px;
+    height: 24px;
+  }
 }

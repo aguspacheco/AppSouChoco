@@ -23,7 +23,7 @@ main {
   left: 0;
   padding: 0 20px;
   background: linear-gradient(90deg, #1488cc, #2b32b2);
-  z-index: 1000; /* Asegúrate de que el navbar esté por encima de otros elementos */
+  z-index: 1000;
 }
 
 .navbar.hidden {
@@ -196,11 +196,10 @@ p {
 .faq-item.show {
   opacity: 1;
   transform: translateY(0) scale(1);
-  box-shadow: 0 8px 20px rgb(0, 0, 0, 0.4);
+  box-shadow: 0 8px 20px #00000066;
 }
 
 /* Estilos para smartphones */
-/* Estilos para pantallas grandes (mayores a 1200px) */
 @media (min-width: 1200px) {
   .faq {
     max-width: 1000px;
@@ -210,74 +209,27 @@ p {
   }
 }
 
-/* Estilos para pantallas medianas (entre 768px y 1200px) */
-@media (max-width: 1199px) and (min-width: 768px) {
-  .navbar {
-    padding: 0 15px;
-  }
-
-  .titulo {
-    width: 30%;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  .faq {
-    max-width: 90%;
-  }
-}
-
-/* Estilos para pantallas pequeñas (entre 480px y 767px) */
-@media (max-width: 767px) and (min-width: 480px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    padding: 10px;
+    align-items: center;
     text-align: center;
+    padding: 10px 0;
   }
 
   .nav-list {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding: 0;
   }
 
   .nav-list li {
-    margin: 5px 0;
-  }
-
-  .titulo {
-    width: 50%;
-    top: 0;
-  }
-
-  .faq {
-    max-width: 95%;
-  }
-
-  .faq-item h3 {
-    font-size: 1em;
-  }
-}
-
-/* Estilos para pantallas muy pequeñas (menos de 480px) */
-@media (max-width: 479px) {
-  .navbar {
-    flex-direction: column;
-    padding: 5px;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-list li {
-    margin: 3px 0;
+    margin: 10px 10px;
   }
 
   .navbar-brand img {
-    height: 40px;
+    height: 60px;
   }
 
   .titulo {
@@ -289,8 +241,7 @@ p {
   }
 
   .faq {
-    max-width: 100%;
-    padding: 50px;
+    padding: 100px;
   }
 
   .faq-item h3 {

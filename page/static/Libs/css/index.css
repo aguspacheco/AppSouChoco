@@ -8,9 +8,16 @@
 }
 
 .container {
-  margin-bottom: 60px; /* Altura del footer */
+  margin-bottom: 60px;
 }
 
 .footer img {
-  margin: 0 5px; /* Espaciado entre los iconos */
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+  #descripcion-nosotros {
+    font-size: 14px;
+    margin-left: 10px;
+  }
 }
