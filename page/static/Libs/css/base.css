@@ -18,11 +18,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed; /* Cambia esto a 'fixed' */
+  position: fixed;
   top: 0;
   left: 0;
   padding: 0 20px;
-  background: linear-gradient(90deg, #1488cc, #2b32b2);
+  background: linear-gradient(90deg, #1489cc, #2b32b2);
   z-index: 1000;
 }
 
@@ -47,13 +47,10 @@ main {
 
 @keyframes blueGlow {
   0% {
-    box-shadow: 0 0 0 0 #145cda;
+    box-shadow: 0 0 0 0 #d5dbe4;
   }
   50% {
-    box-shadow: 0 0 20px 10px #5182d8;
-  }
-  100% {
-    box-shadow: 0 0 0 0 #052968;
+    box-shadow: 0 0 20px 10px #4b73b9;
   }
 }
 
@@ -74,7 +71,6 @@ main {
   color: #fefae0;
   text-decoration: none;
   margin: 0 5px;
-  font-weight: bold;
   transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 

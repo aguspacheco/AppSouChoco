@@ -34,10 +34,12 @@
 }
 
 .navbar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 10px;
+  background-color: #f8f9fa; /* Color de fondo del navbar */
 }
 
 .nav-list {
@@ -53,19 +55,28 @@
 }
 
 .nav-list a {
+  color: #fefae0;
   text-decoration: none;
-  padding: 10px 15px;
-  transition: color 0.3s ease;
+  padding: 15px 20px;
+  display: block;
 }
 
 .dropdown {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100%; /* Coloca el menú debajo del enlace "Productos" */
   left: 0;
-  list-style: none;
-  padding: 10px 0;
-  z-index: 10;
+  z-index: 1000; /* Aseg#0000001até por encima de otros elementos */
+  min-width: 200px; /* Ancho mínimo del menú */
+}
+
+.dropdown.active {
+  display: block; /* Muestra el menú cuando tiene la clase active */
+  position: absolute;
+}
+
+.dropdown-container {
+  position: relative; /* Necesario para que .dropdown use top: 100% correctamente */
 }
 
 .dropdown li {
@@ -73,7 +84,7 @@
 }
 
 .dropdown a {
-  display: block;
+  color: #fefae0;
   padding: 10px 15px;
 }
 
@@ -83,19 +94,27 @@
   position: absolute;
   top: 0;
   left: 100%;
-  margin-left: 10px;
-  white-space: nowrap;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.sub-dropdown.active {
+  display: block; /* Muestra el submenú cuando tiene la clase active */
 }
 
 .toggle-submenu {
+  color: #fefae0;
+  padding: 15px 20px;
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+  top: 15px;
 }
 
 /* Indicadores */
 .indicador {
-  font-size: 12px;
   margin-left: 5px;
+  font-weight: bold;
 }
 
 /* Media query para pantallas de smartphones (por ejemplo, menos de 768px) */
@@ -109,13 +128,6 @@
 
   .nav-list {
     flex-direction: row; /* Mantener la disposición horizontal */
-    align-items: center; /* Centrar verticalmente los elementos */
-    gap: 10px; /* Espacio entre elementos */
-  }
-
-  .nav-list li {
-    margin-right: 10px; /* Espacio entre elementos */
-    margin-bottom: 0; /* Eliminar margen inferior */
   }
 
   .dropdown {

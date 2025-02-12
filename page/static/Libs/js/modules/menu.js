@@ -1,34 +1,44 @@
-// Alternar submenús con comportamiento de abrir/cerrar al clic
 document.querySelectorAll(".toggle-submenu").forEach((toggle) => {
-  toggle.addEventListener("click", (event) => {
-    event.preventDefault();
+  const handleToggle = (event) => {
+    event.preventDefault(); // Evita la acción predeterminada del enlace
+    event.stopPropagation(); // Evita la propagación del evento
 
-    // Selecciona el submenú asociado al botón clicado
     const submenu = toggle.nextElementSibling;
 
-    // Cierra todos los demás submenús
+    if (!submenu || !submenu.classList.contains("sub-dropdown")) return;
+
+    // Cerrar otros submenús abiertos
     document.querySelectorAll(".sub-dropdown").forEach((otherSubmenu) => {
       if (otherSubmenu !== submenu) {
-        otherSubmenu.style.display = "none";
+        otherSubmenu.classList.remove("active");
+        const otherToggle = otherSubmenu.previousElementSibling;
+        if (otherToggle) {
+          const otherIndicador = otherToggle.querySelector(".indicador");
+          if (otherIndicador) {
+            otherIndicador.textContent = "+";
+          }
+        }
       }
     });
 
-    // Cambia el estado del submenú clicado (abrir o cerrar)
-    if (submenu.style.display === "block") {
-      submenu.style.display = "none";
-      toggle.querySelector(".indicador").textContent = "+"; // Actualiza el indicador
-    } else {
-      submenu.style.display = "block";
-      toggle.querySelector(".indicador").textContent = "-"; // Actualiza el indicador
+    // Alternar el submenú actual
+    submenu.classList.toggle("active");
+    const indicador = toggle.querySelector(".indicador");
+    if (indicador) {
+      indicador.textContent = submenu.classList.contains("active") ? "-" : "+";
     }
-  });
+  };
+
+  // Agregar eventos para click y touchstart
+  toggle.addEventListener("click", handleToggle);
+  toggle.addEventListener("touchstart", handleToggle);
 });
 
-// Ocultar todos los submenús si se hace clic fuera del menú
+// Cerrar submenús al hacer clic fuera del menú
 document.addEventListener("click", (event) => {
   if (!event.target.closest(".dropdown-container")) {
     document.querySelectorAll(".sub-dropdown").forEach((submenu) => {
-      submenu.style.display = "none";
+      submenu.classList.remove("active");
     });
     document.querySelectorAll(".indicador").forEach((indicador) => {
       indicador.textContent = "+";
