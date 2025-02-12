@@ -24,6 +24,7 @@
   gap: 20px;
   justify-content: center;
 }
+
 /* Contenedor para el producto, centrando verticalmente la descripción */
 .product-item {
   display: flex;
@@ -66,17 +67,9 @@
   position: absolute;
   top: 100%; /* Coloca el menú debajo del enlace "Productos" */
   left: 0;
-  z-index: 1000; /* Aseg#0000001até por encima de otros elementos */
-  min-width: 200px; /* Ancho mínimo del menú */
-}
-
-.dropdown.active {
-  display: block; /* Muestra el menú cuando tiene la clase active */
-  position: absolute;
-}
-
-.dropdown-container {
-  position: relative; /* Necesario para que .dropdown use top: 100% correctamente */
+  list-style: none;
+  padding: 10px 0;
+  z-index: 10;
 }
 
 .dropdown li {
@@ -100,6 +93,10 @@
 
 .sub-dropdown.active {
   display: block; /* Muestra el submenú cuando tiene la clase active */
+}
+
+.sub-dropdown.active {
+  display: block;
 }
 
 .toggle-submenu {
@@ -130,10 +127,19 @@
     flex-direction: row; /* Mantener la disposición horizontal */
   }
 
+  .dropdown-container {
+    position: relative;
+  }
+
   .dropdown {
-    position: absolute; /* Restaurar posición absoluta para dropdowns */
+    position: absolute;
     top: 100%;
     left: 0;
+    display: none;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
   }
 
   .sub-dropdown {

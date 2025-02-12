@@ -2,7 +2,6 @@
   font-size: 16px;
   font-style: italic;
   color: #fed9b7;
-  margin-left: 20px;
   margin-top: 100px;
   flex: 1;
 }
@@ -19,5 +18,11 @@
   #descripcion-nosotros {
     font-size: 14px;
     margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #descripcion-nosotros {
+    font-size: 14px; /* Reducimos el tamaño de la fuente */
   }
 }
