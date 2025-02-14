@@ -2,47 +2,16 @@ body {
   background: #1488cc, #2b32b2;
   background: -webkit-linear-gradient(90deg, #1488cc, #2b32b2);
   background: linear-gradient(90deg, #1488cc, #2b32b2);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  padding-top: 70px;
 }
 
 .navbar {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 0 20px;
   background: linear-gradient(90deg, #1489cc, #2b32b2);
-  z-index: 1000;
-}
-
-.navbar.hidden {
-  transform: translateY(-100%);
-}
-
-.navbar-brand {
-  flex: 1;
 }
 
 .navbar-brand img {
-  height: 50px;
   border-radius: 50%;
   animation: blueGlow 5s infinite;
   transition: box-shadow 0.3s ease-in-out;
-}
-
-.navbar-brand img:hover {
-  box-shadow: 0 0 20px 5px #56595e;
 }
 
 @keyframes blueGlow {
@@ -54,156 +23,44 @@ main {
   }
 }
 
-.nav-list {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list li {
-  margin: 0 10px;
-  position: relative;
-}
-
-.navbar a {
-  color: #fefae0;
-  text-decoration: none;
-  margin: 0 5px;
-  transition: box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.dropdown,
-.sub-dropdown {
-  display: none;
-  position: absolute;
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
-  border-radius: 5px;
-  z-index: 10;
-}
-
-.dropdown a,
-.sub-dropdown a {
+.dropdown a {
   background-image: url("/static/images/li.png");
-  color: #fff;
-  padding: 5px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown.active {
-  display: block;
-}
-
-.sub-dropdown.active {
-  display: block;
-  top: 0;
-  left: 100%;
 }
 
 .container {
   padding: 80px 20px;
 }
 
-.titulo {
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  top: -20px;
-  width: 25%;
-}
-
 p {
   color: #e0e1dd;
-  text-align: center;
   font-weight: bold;
   text-shadow: 1px 1px 2px #001219, -1px 1px 2px #001219, 1px -1px 2px #001219,
     -1px -1px 2px #023047;
 }
 
-.producto-description {
-  font-size: 16px;
-  font-style: italic;
-  color: #f0e8e8;
-  text-align: center;
-  margin-top: 20px;
-}
-
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  opacity: 9;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .faq-answer.show {
   max-height: 200px;
-  opacity: 1;
   padding-top: 10px;
 }
 
-.faq {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: -70px;
-}
-
 .faq-question {
-  text-align: center;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.faq-question .icon {
-  font-size: 1.2em;
-  transition: transform 0.3s ease;
 }
 
 .faq-item {
   text-align: center;
-  width: 100%;
-}
-
-.faq-item.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .faq-item h3 {
   font-size: 1.2em;
   font-style: italic;
   color: #fed9b7;
-}
-
-.faq-item p {
-  margin: 0;
-}
-
-.faq-item.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  box-shadow: 0 8px 20px #00000066;
-}
-
-<<<<<<< HEAD
-/* Estilos para smartphones */
-@media (min-width: 1200px) {
-  .faq {
-    max-width: 1000px;
-  }
-  .titulo {
-    width: 20%;
-  }
 }
 
 @media (max-width: 768px) {
@@ -213,32 +70,6 @@ p {
     text-align: center;
     padding: 10px 0;
   }
-
-=======
-/* Estilos para pantallas muy pequeñas (menos de 480px) */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Cambia la dirección del navbar a columna */
-    align-items: center; /* Centra los elementos */
-    text-align: center;
-    padding: 10px 0; /* Ajusta el padding */
-  }
->>>>>>> 6adf278aab6dbec2b56cbd68650441957aa221e6
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-  }
-
-  .nav-list li {
-<<<<<<< HEAD
-    margin: 10px 10px;
-=======
-    margin: 3px 0;
->>>>>>> 6adf278aab6dbec2b56cbd68650441957aa221e6
-  }
-
   .navbar-brand img {
     height: 60px;
   }

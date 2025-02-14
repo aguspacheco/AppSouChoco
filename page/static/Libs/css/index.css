@@ -1,17 +1,6 @@
 #descripcion-nosotros {
-  font-size: 16px;
   font-style: italic;
   color: #fed9b7;
-  margin-top: 100px;
-  flex: 1;
-}
-
-.container {
-  margin-bottom: 60px;
-}
-
-.footer img {
-  margin: 0 5px;
 }
 
 @media screen and (max-width: 768px) {

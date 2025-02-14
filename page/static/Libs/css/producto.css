@@ -1,53 +1,29 @@
 /* Estilo para la descripción del producto */
 .product-description {
-  font-size: 16px;
   font-style: italic;
   color: #fed9b7;
-  margin-left: 20px; /* Espacio entre la descripción y la imagen */
-  flex: 1; /* Ocupa el espacio restante en el contenedor de flexbox */
+  margin-left: 20px;
 }
 
-/* Estilo para la imagen del producto */
+/* Estilo para la imagen de los productos */
 .product-image {
   width: 150px;
-  height: auto;
-  display: block;
-  margin: 0;
   border: 1px solid #e0e6ec;
   border-radius: 5px;
   box-shadow: 10px 0 50px #8de4ff;
 }
 
-.product-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-/* Contenedor para el producto, centrando verticalmente la descripción */
+/* Contenedor para el producto */
 .product-item {
   display: flex;
-  max-width: 800px;
   margin: 0 auto 20px;
   flex-direction: row-reverse;
   align-items: center;
 }
 
-.navbar {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #f8f9fa; /* Color de fondo del navbar */
-}
-
 .nav-list {
   display: flex;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .nav-list li {
@@ -63,36 +39,19 @@
 }
 
 .dropdown {
-  display: none;
-  position: absolute;
-  top: 100%; /* Coloca el menú debajo del enlace "Productos" */
-  left: 0;
   list-style: none;
-  padding: 10px 0;
-  z-index: 10;
 }
 
 .dropdown li {
   margin: 0;
 }
 
-.dropdown a {
-  color: #fefae0;
-  padding: 10px 15px;
-}
-
-/* Sub-dropdowns */
+/* Sub menu */
 .sub-dropdown {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  padding: 10px;
-  z-index: 1001;
-}
-
-.sub-dropdown.active {
-  display: block; /* Muestra el submenú cuando tiene la clase active */
+  display: none; /* Oculta el submenú */
+  position: absolute; /* Asegura que el submenú no afecte el flujo del documento */
+  padding: 10px; /* Espaciado interno */
+  left: -5px;
 }
 
 .sub-dropdown.active {
@@ -100,31 +59,30 @@
 }
 
 .toggle-submenu {
+  background: none;
+  border: none;
   color: #fefae0;
   padding: 15px 20px;
   cursor: pointer;
-  text-decoration: none;
+}
+
+/* Ajustar el alineado del botón con los otros enlaces */
+.dropdown-container {
+  display: inline-block;
   position: relative;
-  top: 15px;
 }
 
-/* Indicadores */
-.indicador {
-  margin-left: 5px;
-  font-weight: bold;
-}
-
-/* Media query para pantallas de smartphones (por ejemplo, menos de 768px) */
+/* Media query para pantallas smartphones  */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: row; /* Mantener la disposición horizontal */
+    flex-direction: row;
     padding: 1px;
-    overflow-x: auto; /* Permitir desplazamiento horizontal si el contenido no cabe */
-    white-space: nowrap; /* Evitar que los elementos se envuelvan a la siguiente línea */
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
   .nav-list {
-    flex-direction: row; /* Mantener la disposición horizontal */
+    flex-direction: row;
   }
 
   .dropdown-container {
@@ -138,18 +96,17 @@
     display: none;
     background: white;
     border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px #00000033;
     z-index: 1000;
   }
 
   .sub-dropdown {
-    position: absolute; /* Restaurar posición absoluta para sub-dropdowns */
+    position: absolute;
     top: 0;
     left: 100%;
   }
 
-  /* Ajustes adicionales para mejorar la experiencia en móviles */
   .nav-list a {
-    font-size: 12px; /* Reducir el tamaño de la fuente */
+    font-size: 12px;
   }
 }
