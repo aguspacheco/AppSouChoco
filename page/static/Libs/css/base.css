@@ -23,8 +23,15 @@ body {
   }
 }
 
-.dropdown a {
+.dropdown a,
+.dropdown {
   background-image: url("/static/images/li.png");
+}
+
+/* Elimina estilos específicos para "Tortas" y "Alfacookies" */
+.dropdown a[href*="Tortas"],
+.dropdown a[href*="Alfacookies"] {
+  background: none;
 }
 
 .container {

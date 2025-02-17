@@ -72,41 +72,19 @@
   position: relative;
 }
 
-/* Media query para pantallas smartphones  */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: row;
-    padding: 1px;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
+/* Estilos específicos para el botón principal de Productos */
+.main-productos-btn {
+  background-color: #4a90e2;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
 
-  .nav-list {
-    flex-direction: row;
-  }
+.dropdown[aria-hidden="true"] {
+  display: none;
+}
 
-  .dropdown-container {
-    position: relative;
-  }
-
-  .dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    background: white;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px #00000033;
-    z-index: 1000;
-  }
-
-  .sub-dropdown {
-    position: absolute;
-    top: 0;
-    left: 100%;
-  }
-
-  .nav-list a {
-    font-size: 12px;
-  }
+.dropdown[aria-hidden="false"] {
+  display: block;
 }

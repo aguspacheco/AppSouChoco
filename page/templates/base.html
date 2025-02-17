@@ -27,7 +27,7 @@
           <a href="{% url 'index' %}">Nosotros 🧁</a>
         </li>
         <li class="dropdown-container">
-          <button class="toggle-submenu" aria-expanded="false">
+          <button class="toggle-submenu productos-btn" aria-expanded="false">
             Productos 🍫 <span class="indicador">+</span>
           </button>
           <ul class="dropdown sub-dropdown" aria-hidden="true">
@@ -35,7 +35,7 @@
               <a href="{% url 'producto' categoria='Alfajores' %}">Alfajores</a>
             </li>
             <li>
-              <button class="toggle-submenu" aria-expanded="false">
+              <button class="toggle-submenu budines" aria-expanded="false">
                 Budines <span class="indicador">+</span>
               </button>
               <ul class="dropdown sub-dropdown" aria-hidden="true">
@@ -44,7 +44,7 @@
               </ul>
             </li>
             <li>
-              <button class="toggle-submenu" aria-expanded="false">
+              <button class="toggle-submenu galletas" aria-expanded="false">
                 Galletas <span class="indicador">+</span>
               </button>
               <ul class="dropdown sub-dropdown" aria-hidden="true">
@@ -62,7 +62,7 @@
               <button class="toggle-submenu" aria-expanded="false">
                 Brownies <span class="indicador">+</span>
               </button>
-              <ul class="dropdown sub-dropdown" aria-hidden="true">
+              <ul class="dropdown sub-dropdown brownies" aria-hidden="true">
                 <li><a href="{% url 'producto' categoria='Entero' %}">Entero</a></li>
                 <li><a href="{% url 'producto' categoria='Porciones' %}">En porciones</a></li>
               </ul>
