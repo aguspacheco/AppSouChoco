@@ -19,6 +19,9 @@
   margin: 0 auto 20px;
   flex-direction: row-reverse;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-list {
@@ -48,10 +51,11 @@
 
 /* Sub menu */
 .sub-dropdown {
-  display: none; /* Oculta el submenú */
-  position: absolute; /* Asegura que el submenú no afecte el flujo del documento */
-  padding: 10px; /* Espaciado interno */
+  display: none;
+  position: absolute;
+  padding: 10px;
   left: -5px;
+  z-index: 1000;
 }
 
 .sub-dropdown.active {
@@ -68,7 +72,6 @@
 
 /* Ajustar el alineado del botón con los otros enlaces */
 .dropdown-container {
-  display: inline-block;
   position: relative;
 }
 
