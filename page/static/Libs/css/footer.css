@@ -1,18 +1,6 @@
 .footer {
-  bottom: 0;
-  left: 0;
-  right: 0;
   text-align: center;
   padding: 20px;
-  color: #fff;
-}
-
-.container {
-  margin-bottom: 80px;
-}
-
-.footer img {
-  margin: 0 5px;
 }
 
 @media screen and (max-width: 768px) {
@@ -28,6 +16,23 @@
   .footer img {
     margin: 0 3px;
     width: 24px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 15px; /* Reducimos el padding para que no ocupe demasiado espacio */
+    font-size: 14px; /* Ajustamos el tamaño del texto */
+  }
+
+  .container {
+    margin-bottom: 50px; /* Reducimos el margen inferior para mejor ajuste */
+  }
+
+  .footer img {
+    margin: 0 3px; /* Reducimos el espaciado entre iconos */
+    width: 24px; /* Ajustamos el tamaño de los iconos */
     height: 24px;
   }
 }
